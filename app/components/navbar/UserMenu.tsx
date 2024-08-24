@@ -9,6 +9,7 @@ import { useCallback, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../Avatar";
 import MenuItem from "./MenuItem";
+import { useRouter } from "next/navigation";
 
 interface UserMenuProps {
   currentUser?: SafeUser | null;
@@ -19,6 +20,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
   const loginModal = useLoginModal();
   const rentModal = useRentModal();
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
@@ -57,9 +59,19 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
           <div className="flex flex-col cursor-pointer">
             {currentUser ? (
               <>
-                <MenuItem label="My trips" onClick={() => {}} />
+                <MenuItem
+                  label="My trips"
+                  onClick={() => {
+                    router.push("/trips");
+                  }}
+                />
                 <MenuItem label="My favorite" onClick={() => {}} />
-                <MenuItem label="My reservations" onClick={() => {}} />
+                <MenuItem
+                  label="My reservations"
+                  onClick={() => {
+                    router.push("/reservations");
+                  }}
+                />
                 <MenuItem label="My properties" onClick={() => {}} />
                 <MenuItem label="Airbnb my home" onClick={rentModal.onOpen} />
                 <hr />
