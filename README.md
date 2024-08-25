@@ -1,8 +1,119 @@
+# Airbnb Clone
+
+### Table of contents
+
+- [Background](#background-thought_balloon)
+- [Screenshot](#screenshot)
+  - [Login modal](#login-modal)
+  - [Signup modal](#signup-modal)
+  - [Home page](#home-page)
+  - [Listing detail page](#listing-detail-page)
+  - [Filter listing modals](#filter-listing-modals)
+  - [Register property modals](#register-property-modals)
+  - [My trip page](#my-trip-page)
+  - [My reservations page](#my-reservations-page)
+  - [My favorites page](#my-favorites-page)
+  - [My properties page](#my-properties-page)
+- [Getting Started](#getting-started)
+- [Learn more](#learn-more)
+- [Deploy on Vercel](#deploy-on-vercel)
+
+### Background
+
+This repository is made to follow the tutorial from :clap: [Code With Antonio - Full Stack Airbnb Clone with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth 2023
+](https://youtu.be/c_-b_isI4vg?si=G6Ga16xK0bpCwkn5) youtube video.
+
+:battery: Tech stack:
+
+- Next.js 14
+- Cloudinary
+- Mongodb
+- prisma
+- tailwindcss
+- leaflet
+- next-auth
+- zustand
+
+## Screenshot
+
+#### Login modal
+
+![login modals](./public/screenshots/login-modals.png)
+
+#### Signup modal
+
+![signup modals](./public/screenshots/signup-modals.png)
+
+#### Home page
+
+![home page](./public/screenshots/home-page.png)
+
+#### Listing detail page
+
+![listing detail page (1)](<./public/screenshots/listing-detail-page-(1).png>)
+
+![listing detail page (2)](<./public/screenshots/listing-detail-page-(2).png>)
+
+#### Filter listing modals
+
+![filter listing modals](./public/screenshots/filter-modals.png)
+
+#### Register property modals
+
+![register property modals](./public/screenshots/register-property-modals.png)
+
+#### My trip page
+
+![my trip page](./public/screenshots/my-trip-page.png)
+
+#### My reservations page
+
+![my reservations page](./public/screenshots/my-reservation-page.png)
+
+#### My favorites page
+
+![my favorites page](./public/screenshots/my-favorite-page.png)
+
+#### My properties page
+
+![my properties page](./public/screenshots/my-properties-page.png)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+1. Clone this repository
+
+```bash
+git clone git@github.com:nathanaelsanilo/airbnb-clone.git
+```
+
+2. Copy `.env` and rename it to `.env.local`
+
+```
+# MONGO SECRET
+DATABASE_URL=""
+NEXTAUTH_SECRET=""
+
+# GITHUB SECRET
+GITHUB_ID=
+GITHUB_SECRET=
+
+# GOOGLE SECRET
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+
+# CLOUDINARY
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+```
+
+3. Install dependencies
+
+```bash
+pnpm install
+```
+
+4. Run the development server:
 
 ```bash
 npm run dev
